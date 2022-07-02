@@ -1,10 +1,10 @@
 <template>
   <link rel="stylesheet" href="https://cdn.lineicons.com/1.0.1/LineIcons.min.css" />
-  <div class="navbar">
+  <div class="bottom__navbar">
     <div class="colum">
       <div class="home navbar__icon">
         <i class="lni-home size-md" :class="{ 'lni-tada-effect': !showHome }" id="home" @click="clickIcon"></i>
-        <h4 class="navbar__text" v-if="showHome">Home</h4>
+        <h5 class="navbar__text" v-if="showHome">Home</h5>
       </div>
 
       <div class="check navbar__icon">
@@ -14,17 +14,17 @@
           id="check"
           @click="clickIcon"
         ></i>
-        <h4 class="navbar__text" v-if="showCheck">Check</h4>
+        <h5 class="navbar__text" v-if="showCheck">Check</h5>
       </div>
 
       <div class="coin navbar__icon">
         <i class="lni-coin size-md" :class="{ 'lni-tada-effect': !showCoin }" id="coin" @click="clickIcon"></i>
-        <h4 class="navbar__text" v-if="showCoin">Coin</h4>
+        <h5 class="navbar__text" v-if="showCoin">Coin</h5>
       </div>
 
       <div class="user navbar__icon">
         <i class="lni-user size-md" :class="{ 'lni-tada-effect': !showUser }" id="user" @click="clickIcon"></i>
-        <h4 class="navbar__text" v-if="showUser">User</h4>
+        <h5 class="navbar__text" v-if="showUser">User</h5>
       </div>
     </div>
   </div>
@@ -83,7 +83,7 @@
 </script>
 
 <style setup>
-  .navbar {
+  .bottom__navbar {
     width: 100%;
     height: 55px;
     background-color: #44a8b1;
