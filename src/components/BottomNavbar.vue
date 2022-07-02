@@ -2,30 +2,25 @@
   <link rel="stylesheet" href="https://cdn.lineicons.com/1.0.1/LineIcons.min.css" />
   <div class="bottom__navbar">
     <div class="colum">
-      <div class="home navbar__icon">
+      <router-link class="navbar__icon" :to="{ name: 'Home' }">
         <i class="lni-home size-md" :class="{ 'lni-tada-effect': !showHome }" id="home" @click="clickIcon"></i>
-        <h5 class="navbar__text" v-if="showHome">Home</h5>
-      </div>
-
-      <div class="check navbar__icon">
+      </router-link>
+      <router-link class="check navbar__icon" :to="{ name: 'Write' }">
         <i
           class="lni-check-mark-circle size-md"
           :class="{ 'lni-tada-effect': !showCheck }"
           id="check"
           @click="clickIcon"
         ></i>
-        <h5 class="navbar__text" v-if="showCheck">Check</h5>
-      </div>
+      </router-link>
 
-      <div class="coin navbar__icon">
+      <router-link class="coin navbar__icon" :to="{ name: 'Faq' }">
         <i class="lni-coin size-md" :class="{ 'lni-tada-effect': !showCoin }" id="coin" @click="clickIcon"></i>
-        <h5 class="navbar__text" v-if="showCoin">Coin</h5>
-      </div>
+      </router-link>
 
-      <div class="user navbar__icon">
+      <router-link class="user navbar__icon" :to="{ name: 'MyPage' }">
         <i class="lni-user size-md" :class="{ 'lni-tada-effect': !showUser }" id="user" @click="clickIcon"></i>
-        <h5 class="navbar__text" v-if="showUser">User</h5>
-      </div>
+      </router-link>
     </div>
   </div>
 </template>
@@ -125,10 +120,10 @@
     justify-content: space-evenly;
   }
   .navbar__icon {
-    width: 80px;
     height: 34px;
     display: flex;
     align-items: center;
+    text-decoration: none;
   }
   .navbar__text {
     padding-left: 3px;

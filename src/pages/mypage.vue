@@ -1,4 +1,4 @@
-<template>메인 홈페이지</template>
+<template>마이페이지</template>
 
 <script>
   export default {}

@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">투미프롬미</a>
+      <router-link class="navbar-brand" :to="{ name: 'Home' }">투미프롬미</router-link>
       <button
         class="navbar-toggler"
         type="button"
@@ -15,13 +15,20 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"></li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <router-link class="nav-link" :to="{ name: 'Write' }">편지쓰기</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <router-link class="nav-link" :to="{ name: 'Faq' }">FAQ</router-link>
           </li>
-          <li class="nav-item dropdown">
+          <li class="nav-item">
+            <router-link class="nav-link" :to="{ name: 'MyPage' }">마이페이지</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link" :to="{ name: 'Admin' }">관리자</router-link>
+          </li>
+          <!-- <li class="nav-item dropdown">
             <a
               class="nav-link dropdown-toggle"
               href="#"
@@ -38,15 +45,9 @@
               <li><hr class="dropdown-divider" /></li>
               <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
-          </li>
+          </li> -->
         </ul>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+        <router-link class="btn btn-outline-success" type="" :to="{ name: 'Login' }">Login</router-link>
       </div>
     </div>
   </nav>
