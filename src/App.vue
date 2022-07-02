@@ -1,6 +1,6 @@
 <template>
   <TopNavbar />
-  <router-view />
+  <router-view class="body__container" />
   <BottomNavbar />
 </template>
 
@@ -17,4 +17,11 @@
   }
 </script>
 
-<style></style>
+<style scoped>
+  .body__container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    max-width: 80%;
+  }
+</style>
